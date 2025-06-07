@@ -1,6 +1,7 @@
 package projet.creche.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import projet.creche.model.File;
 import projet.creche.model.Person;
@@ -14,7 +15,7 @@ public class FileServiceImpl implements FileService {
     private FileRepository fileRepository;
     private PersonRepository personRepository;
     @Autowired
-    public FileServiceImpl(FileRepository fileRepository, PersonRepository personRepository) {
+    public FileServiceImpl(FileRepository fileRepository, @Qualifier("personRepository")PersonRepository personRepository) {
         this.fileRepository = fileRepository;
         this.personRepository = personRepository;
     }
