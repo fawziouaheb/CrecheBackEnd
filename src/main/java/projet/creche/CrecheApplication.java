@@ -10,11 +10,7 @@ import java.util.Date;
 @SpringBootApplication
 public class CrecheApplication {
     public static void main(String[] args) {
-        Dotenv dotenv = Dotenv.load();
 
-        // Injecter les variables dans le système
-        System.setProperty("OUTLOOK_USERNAME", dotenv.get("OUTLOOK_USERNAME"));
-        System.setProperty("OUTLOOK_PASSWORD", dotenv.get("OUTLOOK_PASSWORD"));
 
         SpringApplication.run(CrecheApplication.class, args);
 
